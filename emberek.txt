@@ -1,0 +1,30 @@
+n:Kiss János
+an:Nagy Borbala
+ap:Kiss Bela
+sz:1912.12.12. Kisnagyfalva
+l:9876. Nagykisfalva, Kisvasut ut. 11
+fn:Nagy Krisztina
+gy: Kiss Krisztina
+gy: Kiss Borbala
+gy: Kiss Miklos"
+-----
+n:Kiss János
+an:Nagy Borbala
+ap:Kiss Bela
+sz:1912.12.12. Kisnagyfalva
+l:9876. Nagykisfalva, Kisvasut ut. 11
+fn:Nagy Krisztina
+gy: Kiss Krisztina
+gy: Kiss Borbala
+gy: Kiss Miklos"
+-----
+n:Kiss János
+an:Nagy Borbala
+ap:Kiss Bela
+sz:1912.12.12. Kisnagyfalva
+l:9876. Nagykisfalva, Kisvasut ut. 11
+fn:Nagy Krisztina
+gy: Kiss Krisztina
+gy: Kiss Borbala
+gy: Kiss Miklos"
+-----
