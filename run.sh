@@ -1,4 +1,3 @@
-#!/bin/bash
 declare -a emberek
 
 beolvasas(){
@@ -13,19 +12,20 @@ beolvasas(){
 menu() {
     declare -a menu
 
-    for z in ${emberek[@]}
+    for z in ${!emberek[@]}
         do 
-            ell=$(echo "$z" | cut -d ":" -f 1)
+            echo ${emberek[$z]}
+            ell=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
             if [ $ell == "n" ]
                 then
-                menu+=$(echo "$z" | cut -d ":" -f 2)
+                menu+=$(echo "${emberek[$z]}" | cut -d ":" -f 2)
             fi
     done
     
     j=1
     for z in ${menu[@]}
         do 
-            echo "$j. $z" | cut -d ";" -f 1
+            echo "$j. $z"
             ((j++))
         done
     echo "$j. Kilepes"
