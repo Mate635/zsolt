@@ -20,14 +20,12 @@ help() {
 }
 
 kereso() {
-echo "$1"
-echo "$2"
     talalt=0
     for z in ${!emberek[@]}
         do 
-            adategy=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
-            adatketto=$(echo "${emberek[$z]}" | cut -d ":" -f 2)
-            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} == $adatadatketto ]]
+            adategy=("$(echo "${emberek[$z]}" | cut -d ":" -f 1)")
+            adatketto=("$(echo "${emberek[$z]}" | cut -d ":" -f 2)")
+            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} == $adatketto ]]
                 then
                 keresettember=1
             fi
@@ -48,26 +46,25 @@ echo "$2"
         then
         echo "Nem találtam "
     fi
+    exit
     lekerdezes
 }
 
 keresot() {
-echo "$1"
-echo "$2"
     talalt=0
     for z in ${!emberek[@]}
         do 
-            adategy=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
-            adatketto=$(echo "${emberek[$z]}" | cut -d ":" -f 2)
-            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} = $adatadatkettoegy ]
+            adategy=("$(echo "${emberek[$z]}" | cut -d ":" -f 1)")
+            adatketto=("$(echo "${emberek[$z]}" | cut -d ":" -f 2)")
+            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} == $adatketto ]]
                 then
                 keresettember=1
             fi
-            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} != $adatketto ]
+            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} != $adatketto ]]
                 then
                 keresettember=0
             fi
-            if [ $keresettember -eq 1 ]
+            if [[ $keresettember == "1" ]]
                 then
                 if [ $2 = $adatketto ]
                     then
