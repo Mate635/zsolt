@@ -2,118 +2,171 @@ declare -a emberek
 declare -a azonosito
 declare -a menu
 
+
 help() {
    echo "Lekérdezés funkciói"
    echo
    echo "Lehetőségek:"
    echo "------------------------------------"
-   echo "-e     Kilépés a lekérdezésből"
-   echo "an     Anyja neve"
-   echo "ap     Apja neve"
-   echo "sz     Születési idő/hely"
-   echo "l      Lakcím"
-   echo "fn     Felesége(i)/férje(i) neve"
-   echo "gy     Gyerekei"
-   echo "h      Halálozási idő"
+   echo "-e     Kilépés a menübe!"
+   echo "an     Anyja neve."
+   echo "ap     Apja neve."
+   echo "sz     Születési idő/hely."
+   echo "l      Lakcím."
+   echo "fn     Felesége(i)/férje(i) neve."
+   echo "gy     Gyerekei."
+   echo "h      Halálozási idő."
    echo "------------------------------------"
+}
+
+kereso() {
+    talalt=0
+    for z in ${!emberek[@]}
+        do 
+            adategy=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
+            adatketto=$(echo "${emberek[$z]}" | cut -d ":" -f 2)
+            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} = $adatadatkettoegy ]
+                then
+                keresettember=1
+            fi
+            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} != $adatketto ]
+                then
+                keresettember=0
+            fi
+            if [ $keresettember -eq 1 ]
+                then
+                if [ $2 = $adatketto ]
+                    then
+                    ((talalt++))
+                    echo "${emberek[$z]}" | cut -d ":" -f 2
+                fi
+            fi            
+    done
+    if [ $talalt -eq 0 ]
+        then
+        echo "Nem találtam "
+    fi
+    lekerdezes
+}
+
+keresot() {
+    talalt=0
+    for z in ${!emberek[@]}
+        do 
+            adategy=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
+            adatketto=$(echo "${emberek[$z]}" | cut -d ":" -f 2)
+            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} = $adatadatkettoegy ]
+                then
+                keresettember=1
+            fi
+            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} != $adatketto ]
+                then
+                keresettember=0
+            fi
+            if [ $keresettember -eq 1 ]
+                then
+                if [ $2 = $adatketto ]
+                    then
+                    ((talalt++))
+                    echo "$talalt. ${emberek[$z]}" | cut -d ":" -f 2
+                fi
+            fi            
+    done
+    if [ $talalt -eq 0 ]
+        then
+        echo "Nem találtam!"
+    fi
+    lekerdezes
 }
 
 lekerdezes() {
     i=1
-    while [ $i -eq 10000 ]
+    while [ $i -eq 1 ]
             do
                 read -p "${menu[$1-1]} hozzátartozóinak lekérdezése!: " valasztas
-
                 if [ $valasztas == "-e" ]
                     then
-                        menu
+                    menu
                 fi   
                 if [ $valasztas == "-h" ]
                     then                        
-                        help
+                    help
                 fi   
                 if [ $valasztas == "an" ]
                     then
-                        menu
+                    echo -n "Anyja neve: "
+                    kereso "$1" "an"
                 fi   
                 if [ $valasztas == "ap" ]
                     then
-                        menu
+                    echo -n "Apja neve: "
+                    kereso "$1" "ap"
                 fi    
                 if [ $valasztas == "sz" ]
                     then
-                        menu
+                    echo -n "Születési idő/hely: "
+                    kereso "$1" "sz"
                 fi    
                 if [ $valasztas == "l" ]
                     then
-                        menu
+                    echo -n "Lakcím: "
+                    kereso "$1" "l"
                 fi      
                 if [ $valasztas == "fn" ]
                     then
-                        menu
+                    echo "Felesége(i)/férje(i) neve: "
+                    keresot "$1" "fn"
                 fi      
                 if [ $valasztas == "gy" ]
                     then
-                        menu
+                    echo "Gyereke(i): "
+                    keresot "$1" "gy"
                 fi      
                 if [ $valasztas == "h" ]
                     then
-                        menu
-                fi   
-        done
-    
-    
-
-    for z in ${!emberek[@]}
-        do 
-            ell=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
-            if [ $ell == "n" ]
-                then
-                azonosito+=("$(echo "${emberek[($z-1)]}" | cut -d ":" -f 2)")
-                menu+=("$(echo "${emberek[$z]}" | cut -d ":" -f 2)")
-            fi
-    done
-    
+                    echo -n "Halálozási idő: "
+                    kereso "$1" "h"
+                fi  
+                echo "Ilyen parancsot nem találtam kérlek használd a '-h'-t az opciók megjelenítésére!"
+        done    
 }
 
-menu() {
+beolvasas() {
     unset emberek
     readarray -t emberek < emberek.txt
 
     for z in ${!emberek[@]}
         do 
             ell=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
-            if [ $ell == "n" ]
+            if [ $ell = "n" ]
                 then
                 azonosito+=("$(echo "${emberek[($z-1)]}" | cut -d ":" -f 2)")
                 menu+=("$(echo "${emberek[$z]}" | cut -d ":" -f 2)")
             fi
     done
-    
+    menu
+}
+
+menu() {    
     y=1
+
     for z in ${!menu[@]}
         do 
             echo "$y. ${menu[$z]}"
             echo "$y. ${azonosito[$z]}"
             ((y++))
-        done
+    done
+
     echo "$y. Kilépés"
     read -p "Kérjük válasszon!: " valasztas
-    if [ $valasztas -eq $y]
+
+    if [ $valasztas -eq $y ]
         then
+        echo "Köszönjük hogy használta a programot!"
         exit
     fi
+
     lekerdezes "$valasztas"
 }
 
-
-
-
-
-
-
-
-
-
-
-menu
+beolvasas
