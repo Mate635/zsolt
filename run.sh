@@ -25,17 +25,17 @@ kereso() {
         do 
             adategy=("$(echo "${emberek[$z]}" | cut -d ":" -f 1)")
             adatketto=("$(echo "${emberek[$z]}" | cut -d ":" -f 2)")
-            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} == $adatketto ]]
+            if [[ $adategy == "azon" ]] && [[ ${azonosito[($1-1)]} == $adatketto ]]
                 then
                 keresettember=1
             fi
-            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} != $adatketto ]]
+            if [[ $adategy == "azon" ]] && [[ ${azonosito[($1-1)]} != $adatketto ]]
                 then
                 keresettember=0
             fi
             if [[ $keresettember == "1" ]]
                 then
-                if [ $2 = $adatketto ]
+                if [[ $2 == $adategy ]]
                     then
                     ((talalt++))
                     echo "${emberek[$z]}" | cut -d ":" -f 2
@@ -46,7 +46,6 @@ kereso() {
         then
         echo "Nem találtam "
     fi
-    exit
     lekerdezes
 }
 
@@ -56,20 +55,21 @@ keresot() {
         do 
             adategy=("$(echo "${emberek[$z]}" | cut -d ":" -f 1)")
             adatketto=("$(echo "${emberek[$z]}" | cut -d ":" -f 2)")
-            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} == $adatketto ]]
+            if [[ $adategy == "azon" ]] && [[ ${azonosito[($1-1)]} == $adatketto ]]
                 then
                 keresettember=1
             fi
-            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} != $adatketto ]]
+            if [[ $adategy == "azon" ]] && [[ ${azonosito[($1-1)]} != $adatketto ]]
                 then
                 keresettember=0
             fi
             if [[ $keresettember == "1" ]]
                 then
-                if [ $2 = $adatketto ]
+                if [[ $2 == $adategy ]]
                     then
                     ((talalt++))
-                    echo "$talalt. ${emberek[$z]}" | cut -d ":" -f 2
+                    echo -n "$talalt. "
+                    echo "${emberek[$z]}" | cut -d ":" -f 2
                 fi
             fi            
     done
@@ -167,8 +167,14 @@ menu() {
         echo "Köszönjük hogy használta a programot!"
         exit
     fi
-
-    lekerdezes "$valasztas"
+	if [ $valasztas -lt $y ]
+        then
+        lekerdezes "$valasztas"
+        else
+        echo "Ilyet nem találok!"
+        menu
+    fi
+    
 }
 
 beolvasas
