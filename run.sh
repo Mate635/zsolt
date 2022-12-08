@@ -20,20 +20,22 @@ help() {
 }
 
 kereso() {
+echo "$1"
+echo "$2"
     talalt=0
     for z in ${!emberek[@]}
         do 
             adategy=$(echo "${emberek[$z]}" | cut -d ":" -f 1)
             adatketto=$(echo "${emberek[$z]}" | cut -d ":" -f 2)
-            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} = $adatadatkettoegy ]
+            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} == $adatadatketto ]]
                 then
                 keresettember=1
             fi
-            if [ $adategy = "a" ] && [ ${azonosito[$1-1]} != $adatketto ]
+            if [[ $adategy == "a" ]] && [[ ${azonosito[($1-1)]} != $adatketto ]]
                 then
                 keresettember=0
             fi
-            if [ $keresettember -eq 1 ]
+            if [[ $keresettember == "1" ]]
                 then
                 if [ $2 = $adatketto ]
                     then
@@ -50,6 +52,8 @@ kereso() {
 }
 
 keresot() {
+echo "$1"
+echo "$2"
     talalt=0
     for z in ${!emberek[@]}
         do 
@@ -81,9 +85,10 @@ keresot() {
 
 lekerdezes() {
     i=1
+    szam=$1
     while [ $i -eq 1 ]
             do
-                read -p "${menu[$1-1]} hozzátartozóinak lekérdezése!: " valasztas
+                read -p "${menu[$szam-1]} hozzátartozóinak lekérdezése!: " valasztas
                 if [ $valasztas == "-e" ]
                     then
                     menu
@@ -95,37 +100,37 @@ lekerdezes() {
                 if [ $valasztas == "an" ]
                     then
                     echo -n "Anyja neve: "
-                    kereso "$1" "an"
+                    kereso "$szam" "an"
                 fi   
                 if [ $valasztas == "ap" ]
                     then
                     echo -n "Apja neve: "
-                    kereso "$1" "ap"
+                    kereso "$szam" "ap"
                 fi    
                 if [ $valasztas == "sz" ]
                     then
                     echo -n "Születési idő/hely: "
-                    kereso "$1" "sz"
+                    kereso "$szam" "sz"
                 fi    
                 if [ $valasztas == "l" ]
                     then
                     echo -n "Lakcím: "
-                    kereso "$1" "l"
+                    kereso "$szam" "l"
                 fi      
                 if [ $valasztas == "fn" ]
                     then
                     echo "Felesége(i)/férje(i) neve: "
-                    keresot "$1" "fn"
+                    keresot "$szam" "fn"
                 fi      
                 if [ $valasztas == "gy" ]
                     then
                     echo "Gyereke(i): "
-                    keresot "$1" "gy"
+                    keresot "$szam" "gy"
                 fi      
                 if [ $valasztas == "h" ]
                     then
                     echo -n "Halálozási idő: "
-                    kereso "$1" "h"
+                    kereso "$szam" "h"
                 fi  
                 echo "Ilyen parancsot nem találtam kérlek használd a '-h'-t az opciók megjelenítésére!"
         done    
@@ -153,7 +158,7 @@ menu() {
     for z in ${!menu[@]}
         do 
             echo "$y. ${menu[$z]}"
-            echo "$y. ${azonosito[$z]}"
+            #echo "$y. ${azonosito[$z]}"
             ((y++))
     done
 
