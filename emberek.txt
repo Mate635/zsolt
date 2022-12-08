@@ -6,16 +6,16 @@ sz:2001.3.4. Encs
 l:Encs, Benczúr Gyula út 54
 fn:Balogh Annamária
 gy:Varga Kevin
-gy:Varga  Márk
-gy:Varga  Ákos
+gy:Varga Márk
+gy:Varga Ákos
 -----
 azon:1
 n:Horváth János
 an:Rácz Bianka
-ap:Horváth  Barnabás
+ap:Horváth Barnabás
 sz:1967.3.3. Sátoraljaújhely
 l:Sátoraljaújhely, Radnóti Miklós út 11
-fn:Lakatos  Dzsenifer
+fn:Lakatos Dzsenifer
 gy:Horváth János
 -----
 azon:2
@@ -24,19 +24,19 @@ an:Szilágyi Beáta
 ap:Németh Barna
 sz:1993.1.11. Emőd
 l:Emőd, Berek út 84
-fn:Szabó  Sára
+fn:Szabó Sára
 gy:Németh Benjámin
-gy:Németh  Márk
+gy:Németh Márk
 -----
 azon:3
 n:Fehér Géza
-an:Balázs  Andrea
-ap:Fehér  Bence
+an:Balázs Andrea
+ap:Fehér Bence
 sz:2007.8.2. Alsózsolca
 l:Alsózsolca, Berek utca 3
-fn:Papp  Hajnalka
+fn:Papp Hajnalka
 gy:Fehér Pál Nándor
-gy:Fehér  Máté
+gy:Fehér Máté
 -----
 azon:4
 n:Mészáros Richárd Balázs
@@ -44,7 +44,7 @@ an:Lakatos Henrietta
 ap:Mészáros Béla
 sz:1965.11.5. Alsózsolca
 l:Alsózsolca, Borbála út 10
-fn:Takács  Gabriella
+fn:Takács Gabriella
 gy:Mészáros Tamás
 -----
 azon:5
@@ -53,12 +53,12 @@ an:Farkas Cintia
 ap:Lakatos György
 sz:2007.1.8. Abaújszántó
 l:Abaújszántó, Balassi út 95
-fn:Fehér  Noémi
+fn:Fehér Noémi
 gy:Lakatos Pál Nándor
 -----
 azon:6
 n:Balázs Rajmund Soma
-an:Balogh  Noémi
+an:Balogh Noémi
 ap:Balázs Zsolt
 sz:2004.7.9. Alsózsolca
 l:Alsózsolca, Attila út 85
@@ -73,35 +73,35 @@ an:Oláh Rebeka
 ap:Lakatos Endre
 sz:1998.3.9. Tokaj
 l:Tokaj, Hunyadi út 7
-fn:Simon  Erika
+fn:Simon Erika
 gy:Lakatos Zsolt
 gy:Lakatos Gergely Márton
 -----
 azon:8
 n:Szilágyi Endre
-an:Horváth  Dorottya
+an:Horváth Dorottya
 ap:Szilágyi Szilveszter Kornél
 sz:1965.8.5. Cigánd
 l:Cigánd, Akác utca 22
-fn:Tóth  Nóra
+fn:Tóth Nóra
 -----
 azon:9
 n:Gál Mihály
-an:Tóth  Kinga
+an:Tóth Kinga
 ap:Gál Csaba
 sz:1992.10.2. Emőd
 l:Emőd, Zrínyi Miklós út 52
-fn:Horváth  Erika
+fn:Horváth Erika
 -----
 azon:10
-n:Molnár  Barnabás
-an:Németh  Renáta
-ap:Molnár  Róbert
+n:Molnár Barnabás
+an:Németh Renáta
+ap:Molnár Róbert
 sz:1958.4.4. Sátoraljaújhely
 l:Sátoraljaújhely, Bagolyvár út 3
 fn:Oláh Nikolett
 gy:Molnár Pál Nándor
-gy:Molnár  Henrik
+gy:Molnár Henrik
 -----
 azon:11
 n:Rácz Zoltán
@@ -114,14 +114,14 @@ gy:Rácz Kevin
 -----
 azon:12
 n:Fehér Dániel
-an:Lakatos  Boglárka
+an:Lakatos Boglárka
 ap:Fehér Barna
 sz:1959.4.7. Putnok
 l:Putnok, Borbála út 98
 fn:Szilágyi Rebeka
 gy:Fehér Béla
 gy:Fehér Gergely Márton
-gy:Fehér  Dávid
+gy:Fehér Dávid
 -----
 azon:13
 n:Balázs Kristóf Tibor
@@ -129,7 +129,7 @@ an:Lakatos Tünde
 ap:Balázs Levente Marcell Alex
 sz:2005.10.11. Emőd
 l:Emőd, Lévai út 20
-fn:Mészáros  Erika
+fn:Mészáros Erika
 -----
 azon:14
 n:Németh Tamás
@@ -137,14 +137,14 @@ an:Simon Virág
 ap:Németh Szabolcs
 sz:1998.10.1. Tokaj
 l:Tokaj, Radnóti Miklós út 94
-fn:Fekete  Kinga
+fn:Fekete Kinga
 gy:Németh Olivér
 gy:Németh Bertalan
 -----
 azon:15
 n:Lakatos Mihály
 an:Takács Kitti
-ap:Lakatos  Henrik
+ap:Lakatos Henrik
 sz:1977.5.3. Szendrő
 l:Szendrő, Erzsébet út 17
 fn:Németh Szilvia Lilla
@@ -152,25 +152,25 @@ gy:Lakatos László
 gy:Lakatos Krisztián
 -----
 azon:16
-n:Mészáros  Ákos
+n:Mészáros Ákos
 an:Tóth Veronika
-ap:Mészáros  Norbert Gergő
+ap:Mészáros Norbert Gergő
 sz:1959.8.9. Tokaj
 l:Tokaj, Veres Péter út 13
-fn:Kiss  Éva Szabina Dalma
+fn:Kiss Éva Szabina Dalma
 -----
 azon:17
 n:Kiss Béla
-an:Horváth  Gabriella
+an:Horváth Gabriella
 ap:Kiss Patrik
 sz:1964.4.7. Szendrő
 l:Szendrő, Gyöngyvirág utca 64
-fn:Simon  Zsanett Ágnes
+fn:Simon Zsanett Ágnes
 -----
 azon:18
-n:Simon  Márk
-an:Farkas  Éva Szabina Dalma
-ap:Simon  Lajos
+n:Simon Márk
+an:Farkas Éva Szabina Dalma
+ap:Simon Lajos
 sz:1969.3.7. Mezőkeresztes
 l:Mezőkeresztes, Váci Mihály út 4
 fn:Balogh Nikolett
@@ -184,51 +184,51 @@ an:Gál Regina
 ap:Németh Áron
 sz:1978.11.1. Pálháza
 l:Pálháza, Völgy út 61
-fn:Varga  Csilla
-gy:Németh  Vilmos
+fn:Varga Csilla
+gy:Németh Vilmos
 -----
 azon:20
 n:Horváth Milán
 an:Balázs Anett
-ap:Horváth  Bence
+ap:Horváth Bence
 sz:1987.8.11. Miskolc
 l:Miskolc, Gárdonyi út 91
 fn:Simon Vivien
-gy:Horváth  Barnabás
+gy:Horváth Barnabás
 gy:Horváth Zsolt
 gy:Horváth Richárd Balázs
 -----
 azon:21
 n:Balázs Béla
-an:Szilágyi  Gabriella
-ap:Balázs  Roland
+an:Szilágyi Gabriella
+ap:Balázs Roland
 sz:1968.7.2. Sajószentpéter
 l:Sajószentpéter, Veres Péter út 86
 fn:Fehér Klaudia Zsófia
 gy:Balázs Szilárd Zsombor Adrián
 gy:Balázs Ábel
-gy:Balázs  Dávid
+gy:Balázs Dávid
 -----
 azon:22
 n:Fehér Benjámin
 an:Kiss Mercédesz
-ap:Fehér  Roland
+ap:Fehér Roland
 sz:1964.4.1. Kazincbarcika
 l:Kazincbarcika, Arató utca 73
-fn:Gál  Zsanett Ágnes
+fn:Gál Zsanett Ágnes
 gy:Fehér Gábor
 -----
 azon:23
-n:Papp  Bence
-an:Simon  Petra
-ap:Papp  Arnold
+n:Papp Bence
+an:Simon Petra
+ap:Papp Arnold
 sz:1977.9.2. Szendrő
 l:Szendrő, Patkány köz 1
 fn:Fehér Bernadett
 -----
 azon:24
-n:Juhász  Vilmos
-an:Németh  Diána
+n:Juhász Vilmos
+an:Németh Diána
 ap:Juhász Richárd Balázs
 sz:1960.1.8. Alsózsolca
 l:Alsózsolca, Jókai út 31
