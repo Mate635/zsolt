@@ -15,7 +15,7 @@ help() {
    echo "l      Lakcím."
    echo "fn     Felesége(i)/férje(i) neve."
    echo "gy     Gyerekei."
-   echo "h      Halálozási idő."
+   #echo "h      Halálozási idő."
    echo "------------------------------------"
 }
 
